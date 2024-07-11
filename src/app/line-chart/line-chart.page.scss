@@ -1,0 +1,58 @@
+ion-content{
+  .graph-area{
+      position: relative;
+      margin-top: 18px;
+  }
+  .checking-area{
+      background-color: #f9fad2;
+      padding: 10px;
+      margin-top: 26px;
+
+      .wrapping{
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          --background: #f9fad2;
+          border-bottom: 1px solid #cababa;
+          padding: 3px 0 6px 0;
+          .left-part{
+              display: flex;
+              align-items: center;
+              flex: 1;
+              img{
+                  width: 28px;
+                  height: 28px;
+                  object-fit: contain;
+                  margin-right: 8px;
+              }
+              p{
+                  margin: 0;
+                  font-size: 15px;
+                  font-weight: 600;
+                  text-transform: capitalize;
+              }
+          }
+          .right-part{
+              position: relative;
+              display: flex;
+              align-items: center;
+              ion-checkbox {
+                  --checkbox-background-checked: #0a666d;
+                  --border-color-checked: #0a666d;
+                }
+              span{
+                  background-color: #ebebab;
+                  border-radius: 5px;
+                  color: #000000;
+                  text-transform: uppercase;
+                  padding: 10px 25px;
+                  font-size: 13px;
+                  font-family: "Signika Negative", sans-serif;
+                  margin-left: 9px;
+                  border: 1px solid #dadaa7;
+              }
+          }
+      }
+  }
+}

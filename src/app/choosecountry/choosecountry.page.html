@@ -1,0 +1,22 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-back-button icon="chevron-back-outline" defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="header">Choose a Country</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-title>
+    Choose a country profile
+</ion-title>
+<ion-list>
+    <div class="ion-padding">
+      <div *ngFor="let category of categories" class="category" [ngClass]="{'active': isActive(category.name)}" (click)="toggleActive(category.name)">
+        <img [src]="category.imageUrl" alt="Category Image">
+        <p>{{ category.name }}</p>
+      </div>
+    </div>
+  </ion-list>
+</ion-content>

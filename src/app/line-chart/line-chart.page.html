@@ -1,0 +1,245 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-back-button icon="chevron-back-outline" defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="header">Charts</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="graph-area">
+    <canvas #barCanvas></canvas>
+    <canvas #lineCanvas></canvas>
+  </div>
+  <div class="checking-area">
+    <ion-item lines="none" class="ion-no-padding wrapping">
+      <div class="left-part">
+        <img src="assets/images/flag-1.png" loading="lazy" alt=""/>
+        <p>
+          Albania
+        </p>
+      </div>
+      <div class="right-part">
+        <ion-checkbox></ion-checkbox>
+        <span>Table</span>
+      </div>
+    </ion-item>
+    <ion-item lines="none" class="ion-no-padding wrapping">
+      <div class="left-part">
+        <img src="assets/images/flag-2.png" loading="lazy" alt=""/>
+        <p>
+          Andorra
+        </p>
+      </div>
+      <div class="right-part">
+        <ion-checkbox></ion-checkbox>
+        <span>Table</span>
+      </div>
+    </ion-item>
+    <ion-item lines="none" class="ion-no-padding wrapping">
+      <div class="left-part">
+        <img src="assets/images/flag-3.png" loading="lazy" alt=""/>
+        <p>
+          Azerbaijan
+        </p>
+      </div>
+      <div class="right-part">
+        <ion-checkbox></ion-checkbox>
+        <span>Table</span>
+      </div>
+    </ion-item>
+    <ion-item lines="none" class="ion-no-padding wrapping">
+      <div class="left-part">
+        <img src="assets/images/flag-4.png" loading="lazy" alt=""/>
+        <p>
+          Austria
+        </p>
+      </div>
+      <div class="right-part">
+        <ion-checkbox></ion-checkbox>
+        <span>Table</span>
+      </div>
+    </ion-item>
+    <ion-item lines="none" class="ion-no-padding wrapping">
+      <div class="left-part">
+        <img src="assets/images/flag-5.png" loading="lazy" alt=""/>
+        <p>
+          Armenia
+        </p>
+      </div>
+      <div class="right-part">
+        <ion-checkbox></ion-checkbox>
+        <span>Table</span>
+      </div>
+    </ion-item>
+    <ion-item lines="none" class="ion-no-padding wrapping">
+      <div class="left-part">
+        <img src="assets/images/flag-6.png" loading="lazy" alt=""/>
+        <p>
+          Belgium
+        </p>
+      </div>
+      <div class="right-part">
+        <ion-checkbox></ion-checkbox>
+        <span>Table</span>
+      </div>
+    </ion-item>
+    <ion-item lines="none" class="ion-no-padding wrapping">
+      <div class="left-part">
+        <img src="assets/images/flag-8.png" loading="lazy" alt=""/>
+        <p>
+          Bulgaria
+        </p>
+      </div>
+      <div class="right-part">
+        <ion-checkbox></ion-checkbox>
+        <span>Table</span>
+      </div>
+    </ion-item>
+    <ion-item lines="none" class="ion-no-padding wrapping">
+      <div class="left-part">
+        <img src="assets/images/flag-9.png" loading="lazy" alt=""/>
+        <p>
+          Belarus
+        </p>
+      </div>
+      <div class="right-part">
+        <ion-checkbox></ion-checkbox>
+        <span>Table</span>
+      </div>
+    </ion-item>
+    <ion-item lines="none" class="ion-no-padding wrapping">
+      <div class="left-part">
+        <img src="assets/images/flag-10.png" loading="lazy" alt=""/>
+        <p>
+          Canada
+        </p>
+      </div>
+      <div class="right-part">
+        <ion-checkbox></ion-checkbox>
+        <span>Table</span>
+      </div>
+    </ion-item>
+    <ion-item lines="none" class="ion-no-padding wrapping">
+      <div class="left-part">
+        <img src="assets/images/flag-11.png" loading="lazy" alt=""/>
+        <p>
+          Croatia
+        </p>
+      </div>
+      <div class="right-part">
+        <ion-checkbox></ion-checkbox>
+        <span>Table</span>
+      </div>
+    </ion-item>
+    <ion-item lines="none" class="ion-no-padding wrapping">
+      <div class="left-part">
+        <img src="assets/images/flag-12.png" loading="lazy" alt=""/>
+        <p>
+          Cyprus
+        </p>
+      </div>
+      <div class="right-part">
+        <ion-checkbox></ion-checkbox>
+        <span>Table</span>
+      </div>
+    </ion-item>
+    <ion-item lines="none" class="ion-no-padding wrapping">
+      <div class="left-part">
+        <img src="assets/images/flag-13.png" loading="lazy" alt=""/>
+        <p>
+          Czechia
+        </p>
+      </div>
+      <div class="right-part">
+        <ion-checkbox></ion-checkbox>
+        <span>Table</span>
+      </div>
+    </ion-item>
+    <ion-item lines="none" class="ion-no-padding wrapping">
+      <div class="left-part">
+        <img src="assets/images/flag-14.png" loading="lazy" alt=""/>
+        <p>
+          Denmark
+        </p>
+      </div>
+      <div class="right-part">
+        <ion-checkbox></ion-checkbox>
+        <span>Table</span>
+      </div>
+    </ion-item>
+    <ion-item lines="none" class="ion-no-padding wrapping">
+      <div class="left-part">
+        <img src="assets/images/flag-15.png" loading="lazy" alt=""/>
+        <p>
+          Estonia
+        </p>
+      </div>
+      <div class="right-part">
+        <ion-checkbox></ion-checkbox>
+        <span>Table</span>
+      </div>
+    </ion-item>
+    <ion-item lines="none" class="ion-no-padding wrapping">
+      <div class="left-part">
+        <img src="assets/images/flag-16.png" loading="lazy" alt=""/>
+        <p>
+          Finland
+        </p>
+      </div>
+      <div class="right-part">
+        <ion-checkbox></ion-checkbox>
+        <span>Table</span>
+      </div>
+    </ion-item>
+    <ion-item lines="none" class="ion-no-padding wrapping">
+      <div class="left-part">
+        <img src="assets/images/flag-17.png" loading="lazy" alt=""/>
+        <p>
+          France
+        </p>
+      </div>
+      <div class="right-part">
+        <ion-checkbox></ion-checkbox>
+        <span>Table</span>
+      </div>
+    </ion-item>
+    <ion-item lines="none" class="ion-no-padding wrapping">
+      <div class="left-part">
+        <img src="assets/images/flag-18.png" loading="lazy" alt=""/>
+        <p>
+          Georgia
+        </p>
+      </div>
+      <div class="right-part">
+        <ion-checkbox></ion-checkbox>
+        <span>Table</span>
+      </div>
+    </ion-item>
+    <ion-item lines="none" class="ion-no-padding wrapping">
+      <div class="left-part">
+        <img src="assets/images/flag-19.png" loading="lazy" alt=""/>
+        <p>
+          Germany
+        </p>
+      </div>
+      <div class="right-part">
+        <ion-checkbox></ion-checkbox>
+        <span>Table</span>
+      </div>
+    </ion-item>
+    <ion-item lines="none" class="ion-no-padding wrapping">
+      <div class="left-part">
+        <img src="assets/images/flag-20.png" loading="lazy" alt=""/>
+        <p>
+          Greece
+        </p>
+      </div>
+      <div class="right-part">
+        <ion-checkbox></ion-checkbox>
+        <span>Table</span>
+      </div>
+    </ion-item>
+  </div>
+</ion-content>

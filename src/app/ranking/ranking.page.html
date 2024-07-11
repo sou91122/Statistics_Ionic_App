@@ -1,0 +1,271 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-back-button icon="chevron-back-outline" defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="header">Ranking</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <div class="top-text">
+    <p>Share of women among legislators, senior officials and managers, %, year 2020</p>
+  </div>
+  <div class="graph-area">
+    <canvas #barCanvas></canvas>
+    <canvas #lineCanvas></canvas>
+  </div>
+  <div class="vertical-area">
+    <div class="progress-wrap">
+      <div class="inner-wrap">
+        <div class="left-area">
+          <span>1</span>
+          <div class="progress-bar" style="width: 250px;">
+            <h2>Belarus</h2>
+          </div>
+        </div>
+        <div class="right-area">
+          <div class="yellow-bg">
+            <span>49.1</span>
+          </div>
+        </div>
+      </div>
+      <div class="inner-wrap">
+        <div class="left-area">
+          <span>2</span>
+          <div class="progress-bar" style="width: 242px;">
+            <h2>Latvia</h2>
+          </div>
+        </div>
+        <div class="right-area">
+          <div class="yellow-bg">
+            <span>46.9</span>
+          </div>
+        </div>
+      </div>
+      <div class="inner-wrap">
+        <div class="left-area">
+          <span>3</span>
+          <div class="progress-bar" style="width: 237px;">
+            <h2>Republic Of Moldova</h2>
+          </div>
+        </div>
+        <div class="right-area">
+          <div class="yellow-bg">
+            <span>45.7</span>
+          </div>
+        </div>
+      </div>
+      <div class="inner-wrap">
+        <div class="left-area">
+          <span>4</span>
+          <div class="progress-bar" style="width: 232px;">
+            <h2>Poland</h2>
+          </div>
+        </div>
+        <div class="right-area">
+          <div class="yellow-bg">
+            <span>43.3</span>
+          </div>
+        </div>
+      </div>
+      <div class="inner-wrap">
+        <div class="left-area">
+          <span>5</span>
+          <div class="progress-bar" style="width: 228px;">
+            <h2>Kazakhstan</h2>
+          </div>
+        </div>
+        <div class="right-area">
+          <div class="yellow-bg">
+            <span>43.0</span>
+          </div>
+        </div>
+      </div>
+      <div class="inner-wrap">
+        <div class="left-area">
+          <span>6</span>
+          <div class="progress-bar" style="width: 225px;">
+            <h2>Sweden</h2>
+          </div>
+        </div>
+        <div class="right-area">
+          <div class="yellow-bg">
+            <span>42.2</span>
+          </div>
+        </div>
+      </div>
+      <div class="inner-wrap">
+        <div class="left-area">
+          <span>7</span>
+          <div class="progress-bar" style="width: 220px;">
+            <h2>Bulgaria</h2>
+          </div>
+        </div>
+        <div class="right-area">
+          <div class="yellow-bg">
+            <span>41.3</span>
+          </div>
+        </div>
+      </div>
+      <div class="inner-wrap">
+        <div class="left-area">
+          <span>8</span>
+          <div class="progress-bar" style="width: 218px;">
+            <h2>Ukraine</h2>
+          </div>
+        </div>
+        <div class="right-area">
+          <div class="yellow-bg">
+            <span>41.3</span>
+          </div>
+        </div>
+      </div>
+      <div class="inner-wrap">
+        <div class="left-area">
+          <span>9</span>
+          <div class="progress-bar" style="width: 215px;">
+            <h2>United States</h2>
+          </div>
+        </div>
+        <div class="right-area">
+          <div class="yellow-bg">
+            <span>41.1</span>
+          </div>
+        </div>
+      </div>
+      <div class="inner-wrap">
+        <div class="left-area">
+          <span>10</span>
+          <div class="progress-bar" style="width: 211px;">
+            <h2>Kyrgyzstan</h2>
+          </div>
+        </div>
+        <div class="right-area">
+          <div class="yellow-bg">
+            <span>40.9</span>
+          </div>
+        </div>
+      </div>
+      <div class="inner-wrap">
+        <div class="left-area">
+          <span>11</span>
+          <div class="progress-bar" style="width: 209px;">
+            <h2>Slovenia</h2>
+          </div>
+        </div>
+        <div class="right-area">
+          <div class="yellow-bg">
+            <span>40.1</span>
+          </div>
+        </div>
+      </div>
+      <div class="inner-wrap">
+        <div class="left-area">
+          <span>12</span>
+          <div class="progress-bar" style="width: 206px;">
+            <h2>Hungary</h2>
+          </div>
+        </div>
+        <div class="right-area">
+          <div class="yellow-bg">
+            <span>39.2</span>
+          </div>
+        </div>
+      </div>
+      <div class="inner-wrap">
+        <div class="left-area">
+          <span>13</span>
+          <div class="progress-bar" style="width: 203px;">
+            <h2>Iceland</h2>
+          </div>
+        </div>
+        <div class="right-area">
+          <div class="yellow-bg">
+            <span>38.6</span>
+          </div>
+        </div>
+      </div>
+      <div class="inner-wrap">
+        <div class="left-area">
+          <span>14</span>
+          <div class="progress-bar" style="width: 200px;">
+            <h2>Lithuania</h2>
+          </div>
+        </div>
+        <div class="right-area">
+          <div class="yellow-bg">
+            <span>37.9</span>
+          </div>
+        </div>
+      </div>
+      <div class="inner-wrap">
+        <div class="left-area">
+          <span>15</span>
+          <div class="progress-bar" style="width: 197px;">
+            <h2>Estonia</h2>
+          </div>
+        </div>
+        <div class="right-area">
+          <div class="yellow-bg">
+            <span>37.5</span>
+          </div>
+        </div>
+      </div>
+      <div class="inner-wrap">
+        <div class="left-area">
+          <span>16</span>
+          <div class="progress-bar" style="width: 193px;">
+            <h2>Finland</h2>
+          </div>
+        </div>
+        <div class="right-area">
+          <div class="yellow-bg">
+            <span>37.5</span>
+          </div>
+        </div>
+      </div>
+      <div class="inner-wrap">
+        <div class="left-area">
+          <span>17</span>
+          <div class="progress-bar" style="width: 190px;">
+            <h2>United kingdom</h2>
+          </div>
+        </div>
+        <div class="right-area">
+          <div class="yellow-bg">
+            <span>36.8</span>
+          </div>
+        </div>
+      </div>
+      <div class="inner-wrap">
+        <div class="left-area">
+          <span>18</span>
+          <div class="progress-bar" style="width: 180px;">
+            <h2>Georgia</h2>
+          </div>
+        </div>
+        <div class="right-area">
+          <div class="yellow-bg">
+            <span>36.7</span>
+          </div>
+        </div>
+      </div>
+      <div class="inner-wrap">
+        <div class="left-area">
+          <span>19</span>
+          <div class="progress-bar" style="width: 175px;">
+            <h2>Ireland</h2>
+          </div>
+        </div>
+        <div class="right-area">
+          <div class="yellow-bg">
+            <span>36.4</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</ion-content>

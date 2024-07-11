@@ -1,0 +1,24 @@
+ion-content{
+  p{
+    font-size: 14px;
+    line-height: 21px;
+  }
+  ul {
+    padding-left: 24px;
+    li {
+      list-style-type: circle;
+      font-size: 14px;
+      line-height: 25px;
+    }
+  }
+  h4 {
+    font-size: 14px;
+    background-color: #d6d6d64d;
+    padding: 7px 6px 7px 9px;
+    margin: 0;
+    border-radius: 5px;
+    color: #464545;
+    border-bottom: 2px solid #94a0bf;
+    font-weight: 600;
+  }
+}

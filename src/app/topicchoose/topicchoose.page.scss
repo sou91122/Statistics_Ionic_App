@@ -1,0 +1,111 @@
+ion-content{
+  .main-grid{
+    // margin-top: 25px;
+    .right-icon{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      z-index: 99;
+      right: 2%;
+      top: 1%;
+      background-color: #ae7bd6;
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      border: 3px solid #fff;
+      box-shadow: -1px -20px 35px #32325d7d, 0px 8px 15px #00000047;
+      img{
+        width: 22px;
+        height: 22px;
+        object-fit: contain;
+      }
+    }
+    ion-card{
+      margin: 0;
+      margin-bottom: -2px;
+      box-shadow: none;
+      .grid-one{
+        text-align: center;
+        padding: 20px;
+        background-color: #019934;
+        .inner-part{
+          img{
+            width: 70px;
+            height: 70px;
+            object-fit: contain;
+          }
+          .small-text{
+            h3{
+              margin: 13px 0 5px 0;
+              color: #ffffff;
+              text-transform: capitalize;
+              font-size: 15px;
+              font-weight: 600;
+              text-align: left;
+            }
+          }
+        }
+      }
+      .wrap-grid{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .wrapping-part{
+          width: 48%;
+          height: 72px;
+          /* display: flex; */
+          /* justify-content: center; */
+          /* align-items: center; */
+          flex-direction: column;
+          border-radius: 5px;
+          margin-bottom: 8px;
+          text-align: center;
+          img{
+            width: 26px;
+            margin-top: 11px;
+          }
+          h3{
+            margin: 4px 7px 0 0;
+            font-size: 13px;
+            color: #ffffff;
+            text-transform: capitalize;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            text-align: right;
+          }
+        }
+      }
+    }
+    .vertical-grid-inner{
+      background-color: #309e82;
+      width: 105%;
+      margin: 4px 6px 0 0;
+      border-radius: 4px;
+      .wrap-vertical{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        .bg-color{
+          // background-color: red;
+          padding: 19px;
+          h3{
+            margin: 0 0 4px;
+            color: #fff;
+            text-transform: capitalize;
+            font-size: 14px;
+          }
+          h4{
+            margin: 0;
+            color: #fff;
+            text-transform: capitalize;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}

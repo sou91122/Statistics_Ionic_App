@@ -1,0 +1,7 @@
+{
+  "name": "StatApps",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

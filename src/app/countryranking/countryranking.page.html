@@ -1,0 +1,659 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-back-button icon="chevron-back-outline" defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="header">Country Ranking</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-segment slot="fixed" [(ngModel)]="selectedSegment" (ionChange)="segmentChanged($event)">
+    <ion-segment-button value="segment1">
+      Table
+    </ion-segment-button>
+    <ion-segment-button value="segment2">
+      Chart
+    </ion-segment-button>
+    <ion-segment-button value="segment3">
+      Notes
+    </ion-segment-button>
+  </ion-segment>
+
+  <div [ngSwitch]="selectedSegment">
+    <div *ngSwitchCase="'segment1'">
+      <div slot="fixed" class="three-part" style="position: sticky;top: 50px;z-index: 100;width: 100vw;">
+        <div class="top-text">
+          <p>Share of women among legislators, senior officials and managers, %, year 2020</p>
+        </div>
+        <ion-item lines="none">
+          <ion-select slot="end" interface="popover" placeholder="Select an item">
+            <ion-select-option value="nes">1997</ion-select-option>
+            <ion-select-option value="n64">1998</ion-select-option>
+            <ion-select-option value="ps">1999</ion-select-option>
+            <ion-select-option value="genesis">2000</ion-select-option>
+    </ion-select>
+        </ion-item>
+        <div class="tag-area">
+          <p>Country</p>
+          <p>
+            value
+          </p>
+        </div>
+      </div>
+
+      <div class="list-area">
+        <div class="wrap">
+          <div class="flag-wrap">
+            <img src="assets/images/flag-1.png" loading="lazy" alt=""/>
+            <span>
+              1
+            </span>
+          </div>
+          <p>Albania</p>
+          <p>
+            49.1
+          </p>
+        </div>
+        <div class="wrap">
+          <div class="flag-wrap">
+            <img src="assets/images/flag-2.png" loading="lazy" alt=""/>
+            <span>
+              2
+            </span>
+          </div>
+          <p>Andorra</p>
+          <p>
+            46.9
+          </p>
+        </div>
+        <div class="wrap">
+          <div class="flag-wrap">
+            <img src="assets/images/flag-3.png" loading="lazy" alt=""/>
+            <span>
+              3
+            </span>
+          </div>
+          <p>Azerbaijan</p>
+          <p>
+            45.7
+          </p>
+        </div>
+        <div class="wrap">
+          <div class="flag-wrap">
+            <img src="assets/images/flag-4.png" loading="lazy" alt=""/>
+            <span>
+              4
+            </span>
+          </div>
+          <p>Austria</p>
+          <p>
+            43.3
+          </p>
+        </div>
+        <div class="wrap">
+          <div class="flag-wrap">
+            <img src="assets/images/flag-5.png" loading="lazy" alt=""/>
+            <span>
+              5
+            </span>
+          </div>
+          <p>Armenia</p>
+          <p>
+            43.0
+          </p>
+        </div>
+        <div class="wrap">
+          <div class="flag-wrap">
+            <img src="assets/images/flag-6.png" loading="lazy" alt=""/>
+            <span>
+              6
+            </span>
+          </div>
+          <p>Belgium</p>
+          <p>
+            42.3
+          </p>
+        </div>
+        <div class="wrap">
+          <div class="flag-wrap">
+            <img src="assets/images/flag-8.png" loading="lazy" alt=""/>
+            <span>
+              7
+            </span>
+          </div>
+          <p>Bulgaria</p>
+          <p>
+            41.3
+          </p>
+        </div>
+        <div class="wrap">
+          <div class="flag-wrap">
+            <img src="assets/images/flag-9.png" loading="lazy" alt=""/>
+            <span>
+              8
+            </span>
+          </div>
+          <p>Belarus</p>
+          <p>
+            41.3
+          </p>
+        </div>
+        <div class="wrap">
+          <div class="flag-wrap">
+            <img src="assets/images/flag-10.png" loading="lazy" alt=""/>
+            <span>
+              9
+            </span>
+          </div>
+          <p>Canada</p>
+          <p>
+            41.1
+          </p>
+        </div>
+        <div class="wrap">
+          <div class="flag-wrap">
+            <img src="assets/images/flag-11.png" loading="lazy" alt=""/>
+            <span>
+              10
+            </span>
+          </div>
+          <p>Croatia</p>
+          <p>
+            40.9
+          </p>
+        </div>
+        <div class="wrap">
+          <div class="flag-wrap">
+            <img src="assets/images/flag-12.png" loading="lazy" alt=""/>
+            <span>
+              11
+            </span>
+          </div>
+          <p>Cyprus</p>
+          <p>
+            40.1
+          </p>
+        </div>
+        <div class="wrap">
+          <div class="flag-wrap">
+            <img src="assets/images/flag-13.png" loading="lazy" alt=""/>
+            <span>
+              12
+            </span>
+          </div>
+          <p>Czechia</p>
+          <p>
+            39.2
+          </p>
+        </div>
+        <div class="wrap">
+          <div class="flag-wrap">
+            <img src="assets/images/flag-14.png" loading="lazy" alt=""/>
+            <span>
+              13
+            </span>
+          </div>
+          <p>Denmark</p>
+          <p>
+            38.6
+          </p>
+        </div>
+      </div>
+    </div>
+    <div *ngSwitchCase="'segment2'">
+      <div class="graph-area">
+        <canvas #barCanvas></canvas>
+        <canvas #lineCanvas></canvas>
+      </div>
+      <div class="checking-area">
+        <ion-item lines="none" class="ion-no-padding wrapping">
+          <div class="left-part">
+            <img src="assets/images/flag-1.png" loading="lazy" alt=""/>
+            <p>
+              Albania
+            </p>
+          </div>
+          <div class="right-part">
+            <ion-checkbox></ion-checkbox>
+            <span>Table</span>
+          </div>
+        </ion-item>
+        <ion-item lines="none" class="ion-no-padding wrapping">
+          <div class="left-part">
+            <img src="assets/images/flag-2.png" loading="lazy" alt=""/>
+            <p>
+              Andorra
+            </p>
+          </div>
+          <div class="right-part">
+            <ion-checkbox></ion-checkbox>
+            <span>Table</span>
+          </div>
+        </ion-item>
+        <ion-item lines="none" class="ion-no-padding wrapping">
+          <div class="left-part">
+            <img src="assets/images/flag-3.png" loading="lazy" alt=""/>
+            <p>
+              Azerbaijan
+            </p>
+          </div>
+          <div class="right-part">
+            <ion-checkbox></ion-checkbox>
+            <span>Table</span>
+          </div>
+        </ion-item>
+        <ion-item lines="none" class="ion-no-padding wrapping">
+          <div class="left-part">
+            <img src="assets/images/flag-4.png" loading="lazy" alt=""/>
+            <p>
+              Austria
+            </p>
+          </div>
+          <div class="right-part">
+            <ion-checkbox></ion-checkbox>
+            <span>Table</span>
+          </div>
+        </ion-item>
+        <ion-item lines="none" class="ion-no-padding wrapping">
+          <div class="left-part">
+            <img src="assets/images/flag-5.png" loading="lazy" alt=""/>
+            <p>
+              Armenia
+            </p>
+          </div>
+          <div class="right-part">
+            <ion-checkbox></ion-checkbox>
+            <span>Table</span>
+          </div>
+        </ion-item>
+        <ion-item lines="none" class="ion-no-padding wrapping">
+          <div class="left-part">
+            <img src="assets/images/flag-6.png" loading="lazy" alt=""/>
+            <p>
+              Belgium
+            </p>
+          </div>
+          <div class="right-part">
+            <ion-checkbox></ion-checkbox>
+            <span>Table</span>
+          </div>
+        </ion-item>
+        <ion-item lines="none" class="ion-no-padding wrapping">
+          <div class="left-part">
+            <img src="assets/images/flag-8.png" loading="lazy" alt=""/>
+            <p>
+              Bulgaria
+            </p>
+          </div>
+          <div class="right-part">
+            <ion-checkbox></ion-checkbox>
+            <span>Table</span>
+          </div>
+        </ion-item>
+        <ion-item lines="none" class="ion-no-padding wrapping">
+          <div class="left-part">
+            <img src="assets/images/flag-9.png" loading="lazy" alt=""/>
+            <p>
+              Belarus
+            </p>
+          </div>
+          <div class="right-part">
+            <ion-checkbox></ion-checkbox>
+            <span>Table</span>
+          </div>
+        </ion-item>
+        <ion-item lines="none" class="ion-no-padding wrapping">
+          <div class="left-part">
+            <img src="assets/images/flag-10.png" loading="lazy" alt=""/>
+            <p>
+              Canada
+            </p>
+          </div>
+          <div class="right-part">
+            <ion-checkbox></ion-checkbox>
+            <span>Table</span>
+          </div>
+        </ion-item>
+        <ion-item lines="none" class="ion-no-padding wrapping">
+          <div class="left-part">
+            <img src="assets/images/flag-11.png" loading="lazy" alt=""/>
+            <p>
+              Croatia
+            </p>
+          </div>
+          <div class="right-part">
+            <ion-checkbox></ion-checkbox>
+            <span>Table</span>
+          </div>
+        </ion-item>
+        <ion-item lines="none" class="ion-no-padding wrapping">
+          <div class="left-part">
+            <img src="assets/images/flag-12.png" loading="lazy" alt=""/>
+            <p>
+              Cyprus
+            </p>
+          </div>
+          <div class="right-part">
+            <ion-checkbox></ion-checkbox>
+            <span>Table</span>
+          </div>
+        </ion-item>
+        <ion-item lines="none" class="ion-no-padding wrapping">
+          <div class="left-part">
+            <img src="assets/images/flag-13.png" loading="lazy" alt=""/>
+            <p>
+              Czechia
+            </p>
+          </div>
+          <div class="right-part">
+            <ion-checkbox></ion-checkbox>
+            <span>Table</span>
+          </div>
+        </ion-item>
+        <ion-item lines="none" class="ion-no-padding wrapping">
+          <div class="left-part">
+            <img src="assets/images/flag-14.png" loading="lazy" alt=""/>
+            <p>
+              Denmark
+            </p>
+          </div>
+          <div class="right-part">
+            <ion-checkbox></ion-checkbox>
+            <span>Table</span>
+          </div>
+        </ion-item>
+        <ion-item lines="none" class="ion-no-padding wrapping">
+          <div class="left-part">
+            <img src="assets/images/flag-15.png" loading="lazy" alt=""/>
+            <p>
+              Estonia
+            </p>
+          </div>
+          <div class="right-part">
+            <ion-checkbox></ion-checkbox>
+            <span>Table</span>
+          </div>
+        </ion-item>
+        <ion-item lines="none" class="ion-no-padding wrapping">
+          <div class="left-part">
+            <img src="assets/images/flag-16.png" loading="lazy" alt=""/>
+            <p>
+              Finland
+            </p>
+          </div>
+          <div class="right-part">
+            <ion-checkbox></ion-checkbox>
+            <span>Table</span>
+          </div>
+        </ion-item>
+        <ion-item lines="none" class="ion-no-padding wrapping">
+          <div class="left-part">
+            <img src="assets/images/flag-17.png" loading="lazy" alt=""/>
+            <p>
+              France
+            </p>
+          </div>
+          <div class="right-part">
+            <ion-checkbox></ion-checkbox>
+            <span>Table</span>
+          </div>
+        </ion-item>
+        <ion-item lines="none" class="ion-no-padding wrapping">
+          <div class="left-part">
+            <img src="assets/images/flag-18.png" loading="lazy" alt=""/>
+            <p>
+              Georgia
+            </p>
+          </div>
+          <div class="right-part">
+            <ion-checkbox></ion-checkbox>
+            <span>Table</span>
+          </div>
+        </ion-item>
+        <ion-item lines="none" class="ion-no-padding wrapping">
+          <div class="left-part">
+            <img src="assets/images/flag-19.png" loading="lazy" alt=""/>
+            <p>
+              Germany
+            </p>
+          </div>
+          <div class="right-part">
+            <ion-checkbox></ion-checkbox>
+            <span>Table</span>
+          </div>
+        </ion-item>
+        <ion-item lines="none" class="ion-no-padding wrapping">
+          <div class="left-part">
+            <img src="assets/images/flag-20.png" loading="lazy" alt=""/>
+            <p>
+              Greece
+            </p>
+          </div>
+          <div class="right-part">
+            <ion-checkbox></ion-checkbox>
+            <span>Table</span>
+          </div>
+        </ion-item>
+      </div>
+    </div>
+    <div class="third-tab" *ngSwitchCase="'segment3'">
+      <p>Notes tab content here</p>
+      <!-- <div class="textarea-input">
+        <ion-item>
+          <ion-textarea rows="6" label="Messege Here" labelPlacement="floating" placeholder="Message type here...."></ion-textarea>
+        </ion-item>
+        <div class="button-area">
+          <ion-button>Submit</ion-button>
+        </div>
+      </div> -->
+      <!-- <div class="ion-padding">
+        <div class="card-area">
+          <div class="top-name-wrap">
+            <div class="left-wrapping">
+              <div class="notepad-area">
+                <ion-icon name="newspaper-outline"></ion-icon>
+              </div>
+              <p>statistics blog</p>
+            </div>
+            <div class="right-wrapping">
+              <p>28/05/2024,   06:18 PM</p>
+            </div>
+          </div>
+          <p class="short-txt">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus, similique.
+          </p>
+          <div class="image-area">
+            <ion-thumbnail>
+              <img alt="statistics" src="https://plus.unsplash.com/premium_photo-1661384118133-8f8b6eef9715?q=80&w=2067&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+            </ion-thumbnail>
+          </div>
+          <div class="bottom-wrapping">
+            <div class="left-area">
+              <p>7 likes, 12 Comments</p>
+            </div>
+            <div class="right-area">
+              <ul>
+                <li> <ion-button><ion-icon name="heart" style="color: #e91b00;"></ion-icon></ion-button></li>
+                <li> <ion-button><ion-icon name="chatbox-ellipses-outline"></ion-icon></ion-button></li>
+                <li> <ion-button><ion-icon name="share-social"></ion-icon></ion-button></li>
+              </ul>
+            </div>
+          </div>
+          <ion-item lines="none">
+            <ion-avatar slot="start">
+              <img alt="avatar" src="https://www.pngall.com/wp-content/uploads/5/User-Profile-PNG.png" loading="lazy" />
+            </ion-avatar>
+            <ion-label>
+              Sourav Dutta <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, iste.</span>
+            </ion-label>
+          </ion-item>
+        </div>
+        <div class="card-area">
+          <div class="top-name-wrap">
+            <div class="left-wrapping">
+              <div class="notepad-area">
+                <ion-icon name="newspaper-outline"></ion-icon>
+              </div>
+              <p>statistics blog</p>
+            </div>
+            <div class="right-wrapping">
+              <p>28/05/2024,   06:18 PM</p>
+            </div>
+          </div>
+          <p class="short-txt">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus, similique.
+          </p>
+          <div class="image-area">
+            <ion-thumbnail>
+              <img alt="statistics" src="https://images.pexels.com/photos/7876672/pexels-photo-7876672.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+            </ion-thumbnail>
+          </div>
+          <div class="bottom-wrapping">
+            <div class="left-area">
+              <p>7 likes, 12 Comments</p>
+            </div>
+            <div class="right-area">
+              <ul>
+                <li> <ion-button><ion-icon name="heart" style="color: #e91b00;"></ion-icon></ion-button></li>
+                <li> <ion-button><ion-icon name="chatbox-ellipses-outline"></ion-icon></ion-button></li>
+                <li> <ion-button><ion-icon name="share-social"></ion-icon></ion-button></li>
+              </ul>
+            </div>
+          </div>
+          <ion-item lines="none">
+            <ion-avatar slot="start">
+              <img alt="avatar" src="https://www.pngall.com/wp-content/uploads/5/User-Profile-PNG.png" loading="lazy" />
+            </ion-avatar>
+            <ion-label>
+              Sourav Dutta <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, iste.</span>
+            </ion-label>
+          </ion-item>
+        </div>
+        <div class="card-area">
+          <div class="top-name-wrap">
+            <div class="left-wrapping">
+              <div class="notepad-area">
+                <ion-icon name="newspaper-outline"></ion-icon>
+              </div>
+              <p>statistics blog</p>
+            </div>
+            <div class="right-wrapping">
+              <p>28/05/2024,   06:18 PM</p>
+            </div>
+          </div>
+          <p class="short-txt">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus, similique.
+          </p>
+          <div class="image-area">
+            <ion-thumbnail>
+              <img alt="statistics" src="https://images.pexels.com/photos/4960438/pexels-photo-4960438.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+            </ion-thumbnail>
+          </div>
+          <div class="bottom-wrapping">
+            <div class="left-area">
+              <p>7 likes, 12 Comments</p>
+            </div>
+            <div class="right-area">
+              <ul>
+                <li> <ion-button><ion-icon name="heart" style="color: #e91b00;"></ion-icon></ion-button></li>
+                <li> <ion-button><ion-icon name="chatbox-ellipses-outline"></ion-icon></ion-button></li>
+                <li> <ion-button><ion-icon name="share-social"></ion-icon></ion-button></li>
+              </ul>
+            </div>
+          </div>
+          <ion-item lines="none">
+            <ion-avatar slot="start">
+              <img alt="avatar" src="https://www.pngall.com/wp-content/uploads/5/User-Profile-PNG.png" loading="lazy" />
+            </ion-avatar>
+            <ion-label>
+              Sourav Dutta <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, iste.</span>
+            </ion-label>
+          </ion-item>
+        </div>
+        <div class="card-area">
+          <div class="top-name-wrap">
+            <div class="left-wrapping">
+              <div class="notepad-area">
+                <ion-icon name="newspaper-outline"></ion-icon>
+              </div>
+              <p>statistics blog</p>
+            </div>
+            <div class="right-wrapping">
+              <p>28/05/2024,   06:18 PM</p>
+            </div>
+          </div>
+          <p class="short-txt">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus, similique.
+          </p>
+          <div class="image-area">
+            <ion-thumbnail>
+              <img alt="statistics" src="https://images.pexels.com/photos/669619/pexels-photo-669619.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+            </ion-thumbnail>
+          </div>
+          <div class="bottom-wrapping">
+            <div class="left-area">
+              <p>7 likes, 12 Comments</p>
+            </div>
+            <div class="right-area">
+              <ul>
+                <li> <ion-button><ion-icon name="heart" style="color: #e91b00;"></ion-icon></ion-button></li>
+                <li> <ion-button><ion-icon name="chatbox-ellipses-outline"></ion-icon></ion-button></li>
+                <li> <ion-button><ion-icon name="share-social"></ion-icon></ion-button></li>
+              </ul>
+            </div>
+          </div>
+          <ion-item lines="none">
+            <ion-avatar slot="start">
+              <img alt="avatar" src="https://www.pngall.com/wp-content/uploads/5/User-Profile-PNG.png" loading="lazy" />
+            </ion-avatar>
+            <ion-label>
+              Sourav Dutta <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, iste.</span>
+            </ion-label>
+          </ion-item>
+        </div>
+        <div class="card-area">
+          <div class="top-name-wrap">
+            <div class="left-wrapping">
+              <div class="notepad-area">
+                <ion-icon name="newspaper-outline"></ion-icon>
+              </div>
+              <p>statistics blog</p>
+            </div>
+            <div class="right-wrapping">
+              <p>28/05/2024,   06:18 PM</p>
+            </div>
+          </div>
+          <p class="short-txt">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus, similique.
+          </p>
+          <div class="image-area">
+            <ion-thumbnail>
+              <img alt="statistics" src="https://images.pexels.com/photos/6476589/pexels-photo-6476589.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+            </ion-thumbnail>
+          </div>
+          <div class="bottom-wrapping">
+            <div class="left-area">
+              <p>7 likes, 12 Comments</p>
+            </div>
+            <div class="right-area">
+              <ul>
+                <li> <ion-button><ion-icon name="heart" style="color: #e91b00;"></ion-icon></ion-button></li>
+                <li> <ion-button><ion-icon name="chatbox-ellipses-outline"></ion-icon></ion-button></li>
+                <li> <ion-button><ion-icon name="share-social"></ion-icon></ion-button></li>
+              </ul>
+            </div>
+          </div>
+          <ion-item lines="none">
+            <ion-avatar slot="start">
+              <img alt="avatar" src="https://www.pngall.com/wp-content/uploads/5/User-Profile-PNG.png" loading="lazy" />
+            </ion-avatar>
+            <ion-label>
+              Sourav Dutta <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, iste.</span>
+            </ion-label>
+          </ion-item>
+        </div>
+      </div> -->
+    </div>
+  </div>
+</ion-content>
